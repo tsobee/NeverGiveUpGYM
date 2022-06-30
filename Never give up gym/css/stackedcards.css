@@ -1,0 +1,77 @@
+.stacked-cards {
+    position: relative;
+    padding-bottom: 50px;
+}
+.stacked-cards ul {
+    position: relative;
+    max-width: 60%;
+    margin: 0 auto;
+    padding-left: 0;
+}
+
+.stacked-cards li {
+    margin-top: 5px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px 0px #333;
+    list-style: none;
+    width: 45%;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    transition: 0.5s ease transform;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.stacked-cards li p{
+    font-size: 15px;
+    font-weight: inherit;
+    color: #ffffff;
+    padding: 10%;
+}
+@media only screen and (max-width: 950px){
+    .stacked-cards li {
+        width: 65%;
+    }
+       .stacked-cards li p{
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 650px){
+    .stacked-cards li {
+        width: 65%;
+    }
+    .stacked-cards li p{
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 550px){
+    .stacked-cards li {
+        width: 55%;
+    }
+    .stacked-cards li p{
+        font-size: 11px;
+    }
+}
+.stacked-cards li:after {
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.stacked-cards li.active:after {
+    display: none;
+}
+.stacked-cards li img {
+    position: relative;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    z-index: 4;
+}
+.stacked-cards li.active {
+    cursor: default;
+    box-shadow: 0 5px 10px 0px #333;
+    transition: 0.5s ease transform;
+}
